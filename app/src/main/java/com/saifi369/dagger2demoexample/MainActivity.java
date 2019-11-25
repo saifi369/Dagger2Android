@@ -1,8 +1,8 @@
 package com.saifi369.dagger2demoexample;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,17 +11,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //this is Constructor Injection
         Engine engine=new Engine();
-        Wheels wheels=new Wheels();
+        Car hondaCar = new Car(engine);
 
-        Service service=new Service();
+        //this is Field Injection
+        hondaCar.mService = new Service();
 
-        Car honda=new Car(service);
+        //this is Method Injection
+        hondaCar.setWheels(new Wheels());
 
-        honda.mWheels=wheels;
-        honda.setEngine(engine);
+        hondaCar.drive();
 
-        honda.drive();
 
     }
 }

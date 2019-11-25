@@ -6,12 +6,20 @@ import static com.saifi369.dagger2demoexample.Constants.TAG;
 
 public class Car {
 
-    private Engine mEngine;
-    public Wheels mWheels;
-    private final Service mService;
+    public Engine mEngine;
+    public Service mService;
+    private Wheels mWheels;
 
-    public Car(Service service) {
-        mService=service;
+    public Car(Engine engine) {
+        this.mEngine = engine;
+    }
+
+//    public void setEngine(Engine mEngine) {
+//        this.mEngine = mEngine;
+//    }
+
+    public void setWheels(Wheels wheels) {
+        this.mWheels = wheels;
     }
 
     public void drive(){
@@ -22,7 +30,4 @@ public class Car {
         Log.d(TAG, "drive: Vhroooooooom: Car is driving");
     }
 
-    public void setEngine(Engine mEngine) {
-        this.mEngine = mEngine;
-    }
 }

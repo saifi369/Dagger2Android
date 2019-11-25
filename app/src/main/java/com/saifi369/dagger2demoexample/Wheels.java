@@ -16,8 +16,7 @@ public class Wheels {
 
     }
 
-    public void inflate(){
+    public void inflate() {
         Log.d(TAG, "inflate: Wheels inflated");
     }
-
 }

@@ -18,11 +18,12 @@ public class Engine {
 
     }
 
-    public void start(){
-        Log.d(TAG, "start: Engine started");
-    }
 
     public static void status() {
         Log.d(TAG, "status: Engine is not ready, create engine object");
+    }
+
+    public void start() {
+        Log.d(TAG, "start: Engine started");
     }
 }
