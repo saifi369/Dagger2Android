@@ -7,18 +7,10 @@ import static com.saifi369.dagger2demoexample.Constants.TAG;
 public class Car {
 
     public Engine mEngine;
-    public Service mService;
     private Wheels mWheels;
 
-    public Car(Engine engine) {
+    public Car(Engine engine, Wheels wheels) {
         this.mEngine = engine;
-    }
-
-//    public void setEngine(Engine mEngine) {
-//        this.mEngine = mEngine;
-//    }
-
-    public void setWheels(Wheels wheels) {
         this.mWheels = wheels;
     }
 

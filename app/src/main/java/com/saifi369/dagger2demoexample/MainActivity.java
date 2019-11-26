@@ -2,6 +2,8 @@ package com.saifi369.dagger2demoexample;
 
 import android.os.Bundle;
 
+import com.saifi369.dagger2demoexample.di.DICarFactory;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,18 +13,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //this is Constructor Injection
-        Engine engine=new Engine();
-        Car hondaCar = new Car(engine);
-
-        //this is Field Injection
-        hondaCar.mService = new Service();
-
-        //this is Method Injection
-        hondaCar.setWheels(new Wheels());
+        Car hondaCar = DICarFactory.getCar();
 
         hondaCar.drive();
-
 
     }
 }

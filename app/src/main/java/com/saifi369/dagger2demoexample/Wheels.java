@@ -9,10 +9,10 @@ public class Wheels {
     private Frame mFrame;
     private Rubber mRubberType;
 
-    public Wheels() {
+    public Wheels(Frame frame, Rubber rubber) {
 
-        mFrame=new Frame();
-        mRubberType=new Rubber();
+        mFrame = frame;
+        mRubberType = rubber;
 
     }
 

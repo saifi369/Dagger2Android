@@ -10,11 +10,11 @@ public class Engine {
     private CrankShaft mCrankShaft;
     private Piston mPiston;
 
-    public Engine() {
+    public Engine(SparkPlug sparkPlug, CrankShaft crankShaft, Piston piston) {
 
-        mCrankShaft=new CrankShaft();
-        mPiston=new Piston();
-        mSparkPlug=new SparkPlug();
+        mSparkPlug = sparkPlug;
+        mCrankShaft = crankShaft;
+        mPiston = piston;
 
     }
 
